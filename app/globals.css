@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 300 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.1 70.6% 45.3%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.neon-border {
+  @apply border-2 border-neon-green shadow-[0_0_10px_#39FF14,0_0_20px_#39FF14];
+}
+
+.neon-border-purple {
+  @apply border-2 border-neon-purple shadow-[0_0_10px_#BC13FE,0_0_20px_#BC13FE];
+}
+
+.neon-text-green {
+  @apply text-neon-green drop-shadow-[0_0_8px_#39FF14];
+}
+
+.neon-text-purple {
+  @apply text-neon-purple drop-shadow-[0_0_8px_#BC13FE];
+}
+
+.neon-button {
+  @apply bg-transparent text-neon-green border-2 border-neon-green rounded-md px-4 py-2 transition-all duration-300 shadow-[0_0_10px_#39FF14];
+  @apply hover:shadow-[0_0_15px_#39FF14,0_0_25px_#39FF14] hover:bg-neon-green/10;
+}
+
+.neon-button-purple {
+  @apply bg-transparent text-neon-purple border-2 border-neon-purple rounded-md px-4 py-2 transition-all duration-300 shadow-[0_0_10px_#BC13FE];
+  @apply hover:shadow-[0_0_15px_#BC13FE,0_0_25px_#BC13FE] hover:bg-neon-purple/10;
+}
+
+.neon-card {
+  @apply bg-black/60 backdrop-blur-sm border-2 border-neon-green rounded-lg shadow-[0_0_10px_#39FF14];
+  @apply hover:shadow-[0_0_15px_#39FF14,0_0_25px_#39FF14] transition-all duration-300;
+}
+
+.neon-card-purple {
+  @apply bg-black/60 backdrop-blur-sm border-2 border-neon-purple rounded-lg shadow-[0_0_10px_#BC13FE];
+  @apply hover:shadow-[0_0_15px_#BC13FE,0_0_25px_#BC13FE] transition-all duration-300;
+}
+
+.neon-input {
+  @apply bg-black/60 text-white border-2 border-neon-green rounded-md px-4 py-2 focus:outline-none focus:shadow-[0_0_10px_#39FF14];
+}
+
+.neon-input-purple {
+  @apply bg-black/60 text-white border-2 border-neon-purple rounded-md px-4 py-2 focus:outline-none focus:shadow-[0_0_10px_#BC13FE];
+}
+
+.grid-pattern {
+  background-image: linear-gradient(rgba(57, 255, 20, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(188, 19, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(188, 19, 254, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
